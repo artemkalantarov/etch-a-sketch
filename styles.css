@@ -1,0 +1,27 @@
+.square {
+    display: flex;
+    flex: 1;
+    border-left: solid;
+    border-top: solid;
+    border-width: thin;
+}
+
+.row {
+    display: flex;
+    flex: 1;
+}
+
+
+.grid {
+    display: flex;
+    flex-direction: column;
+    width: 700px;
+    height: 700px;
+    border-right: solid;
+    border-bottom: solid;
+    border-width: thin;
+}
+
+.hover {
+    background-color: red;
+}
