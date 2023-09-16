@@ -1,6 +1,10 @@
 function newSquare() {
     const square = document.createElement("div");
-    square.className = "square";
+    if (gridBorder) {
+        square.className = "square square-border";
+    } else {
+        square.className = "square";
+    }
     return square;
 }
 
@@ -76,17 +80,36 @@ function getRandomColor(alpha) {
 }
 
 function getColorMode() {
-    const buttons = document.querySelectorAll("button");
+    const buttons = document.querySelectorAll(".color-btn");
     buttons.forEach(button => button.addEventListener("click", function(){
-        colorMode = this.className;
+        colorMode = this.id;
         setUpGrid();
-        console.log(colorMode)
     }))
 }
 
+function clearGrid() {
+    const clearButton = document.querySelector(".clear");
+    clearButton.addEventListener("click", () => setUpGrid());
+}
+
+function borderChange() {
+    document.querySelector(".grid").classList.toggle("grid-border");
+    const squares = document.querySelectorAll(".square");
+    squares.forEach(square => square.classList.toggle("square-border"));
+    gridBorder ? gridBorder = false : gridBorder = true ;
+    console.log(gridBorder)
+}
+
+function borderToggle() {
+    const gridBtn = document.querySelector(".border-toggle");
+    gridBtn.addEventListener("click", () => borderChange());
+}
 let colorMode = "black"
 let gridSize = 16;
+let gridBorder = true;
 
 setUpGrid();
 getColorMode();
 changeGridSize();
+clearGrid();
+borderToggle();

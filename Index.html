@@ -8,11 +8,27 @@
 </head>
 <body>
     <h1>Etch-A-Sketch Game</h1>
-    <button class="grid-size-change">Change Grid Size</button>
-    <button class="black">Black</button>
-    <button class="rainbow">Rainbow</button>
-    <button class="rainbow-opacity">Rainbow with opacity change</button>
-    <div class="grid"></div>
+    <div class="container">
+        <div class="buttons">
+            <div class="settings">
+                <h3>Settings</h3>
+                <div class="settings-buttons">
+                    <button class="grid-size-change">Change Grid Size</button>
+                    <button class="clear">Clear</button>
+                    <button class="border-toggle">Grid ON/OFF</button>
+                </div>
+            </div>
+            <div class="color">
+                <h3>Color Options</h3>
+                <div class="color-buttons">
+                    <button class="color-btn" id="black">Black</button>
+                    <button class="color-btn" id="rainbow">Rainbow</button>
+                    <button class="color-btn" id="rainbow-opacity">Opacity Rainbow</button>
+                </div>
+            </div>
+        </div>
+        <div class="grid grid-border"></div>
+    </div>
 </body>
 </html>
 <script src="script.js"></script>
