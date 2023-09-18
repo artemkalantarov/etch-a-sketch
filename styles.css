@@ -24,37 +24,28 @@ h3 {
 
 .container {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    justify-content: center;
     flex: 1;
     background-color: #e5e7eb;
 }
 
 .settings-buttons, .color-buttons {
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    gap: 2em;
+    gap: 1em;
 
 }
 
 .settings, .color {
-    border-style: solid;
-    border-radius: 5px;
-    padding: .5em;
+    padding: 2em;
+    text-align: center;
 }
 
-.buttons {
-    display: flex;
-    align-items: center;
-    gap: 2em;
-    text-align: center;
-    margin-top: 1em;
-}
 
 .square {
     display: flex;
     flex: 1;
-
     background-color: rgb(0,0,0,0);
 }
 
@@ -70,8 +61,6 @@ h3 {
     border-width: thin;
 }
 
-
-
 .row {
     display: flex;
     flex: 1;
@@ -81,12 +70,25 @@ h3 {
 .grid {
     display: flex;
     flex-direction: column;
-    width: 500px;
-    height: 500px;
+    width: 600px;
+    height: 600px;
     background-color: white;
-    margin-top: 1em;
+    margin-top: 2em;
 }
 
-.hover {
-    background-color: red;
+
+button {
+    padding: 7px 16px;
+    font-size: 16px;
+    color: #E5E7EB;
+    font-weight: 700;
+    background-color: #3882F6;
+    border: none;
+    border-radius: 8px;
+    transition: all .07s ease-in-out;
 }
+
+button:hover {
+    transform: scale(1.1);
+}
+
